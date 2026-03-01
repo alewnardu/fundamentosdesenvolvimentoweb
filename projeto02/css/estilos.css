@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+}
+
+header nav {
+    width: 1005px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    font-style: regular;
+    opacity: 50%;
+}
+
+header nav ul li:first-child {
+    font-weight: bold;
+}
+
+header nav h5 {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 22px !important;
+    color: #89C5CC;
+    font-style: regular;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+section {
+    flex: 1;
+    display: flex;
+    width: 1002px !important;
+    height: 332px !important;
+    margin: 0 auto;
+}
+
+section article {
+    flex: 1;
+}
+
+section article:first-child {
+    height: 332px !important;
+    position: relative;
+}
+
+section article img {
+    width: 481px;
+    height: 332px;
+}
+
+section article button {
+    padding: 14px 32px 15px 32px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #69B99D;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-flex;   
+    align-items: center;
+    gap: 10px;
+}
+
+section article h1 {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 56px;
+    letter-spacing: 0.00em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+section article h1 span {
+    color: #89C5CC;
+    font-weight: 700;
+}
+
+section article p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #7d7987;
+    font-style: regular;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+figure img {
+    width: 348px;
+    height: 223px;
+}
+
+footer {
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+    font-style: regular;
+}
