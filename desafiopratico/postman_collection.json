@@ -1,0 +1,165 @@
+{
+  "info": {
+    "_postman_id": "3b277290-88cc-4a0e-9696-7c67aadd4139",
+    "name": "API Filmes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53476863",
+    "_collection_link": "https://go.postman.co/collection/53476863-3b277290-88cc-4a0e-9696-7c67aadd4139?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "listar-todos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/filmes",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "filmes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listar-por-id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/filmes/5",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "filmes",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "atualizar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Harry Potter Teste Atualizado\",\r\n  \"titulo_original\": \"Test Movie Atualizado\",\r\n  \"diretor\": \"Leonardo Atualizado\",\r\n  \"ano_lancamento\": 2026,\r\n  \"genero\": \"Fantasia\",\r\n  \"duracao_minutos\": 120,\r\n  \"classificacao\": \"Livre\",\r\n  \"avaliacao_imdb\": 9.5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/filmes/4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "filmes",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "alterar-situacao",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/filmes/6",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "filmes",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "cadastrar",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Animais Fantásticos e Onde Habitam\",\r\n  \"titulo_original\": \"Fantastic Beasts and Where to Find Them\",\r\n  \"diretor\": \"David Yates\",\r\n  \"ano_lancamento\": 2016,\r\n  \"genero\": \"Fantasia\",\r\n  \"duracao_minutos\": 132,\r\n  \"classificacao\": \"12\",\r\n  \"avaliacao_imdb\": 7.2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/filmes",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "filmes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "remover",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/filmes/9",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "filmes",
+            "9"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
