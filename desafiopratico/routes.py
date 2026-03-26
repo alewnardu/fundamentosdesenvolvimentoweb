@@ -1,111 +1,15 @@
 from flask import jsonify, request
 from app import app
-
-dados = [
-        {
-            "id": 1,
-            "titulo": "Harry Potter e a Pedra Filosofal",
-            "titulo_original": "Harry Potter and the Sorcerer's Stone",
-            "diretor": "Chris Columbus",
-            "ano_lancamento": 2001,
-            "genero": "Fantasia/Aventura",
-            "duracao_minutos": 152,
-            "classificacao": "Livre",
-            "avaliacao_imdb": 7.6,
-            "situacao": 1
-        },
-        {
-            "id": 2,
-            "titulo": "Harry Potter e a Câmara Secreta",
-            "titulo_original": "Harry Potter and the Chamber of Secrets",
-            "diretor": "Chris Columbus",
-            "ano_lancamento": 2002,
-            "genero": "Fantasia/Aventura",
-            "duracao_minutos": 161,
-            "classificacao": "Livre",
-            "avaliacao_imdb": 7.4,
-            "situacao": 1
-        },
-        {
-            "id": 3,
-            "titulo": "Harry Potter e o Prisioneiro de Azkaban",
-            "titulo_original": "Harry Potter and the Prisoner of Azkaban",
-            "diretor": "Alfonso Cuarón",
-            "ano_lancamento": 2004,
-            "genero": "Fantasia/Aventura",
-            "duracao_minutos": 142,
-            "classificacao": "Livre",
-            "avaliacao_imdb": 7.9,
-            "situacao": 1
-        },
-        {
-            "id": 4,
-            "titulo": "Harry Potter e o Cálice de Fogo",
-            "titulo_original": "Harry Potter and the Goblet of Fire",
-            "diretor": "Mike Newell",
-            "ano_lancamento": 2005,
-            "genero": "Fantasia/Aventura",
-            "duracao_minutos": 157,
-            "classificacao": "12",
-            "avaliacao_imdb": 7.7,
-            "situacao": 1
-        },
-        {
-            "id": 5,
-            "titulo": "Harry Potter e a Ordem da Fênix",
-            "titulo_original": "Harry Potter and the Order of the Phoenix",
-            "diretor": "David Yates",
-            "ano_lancamento": 2007,
-            "genero": "Fantasia/Aventura",
-            "duracao_minutos": 138,
-            "classificacao": "12",
-            "avaliacao_imdb": 7.5,
-            "situacao": 1
-        },
-        {
-            "id": 6,
-            "titulo": "Harry Potter e o Enigma do Príncipe",
-            "titulo_original": "Harry Potter and the Half-Blood Prince",
-            "diretor": "David Yates",
-            "ano_lancamento": 2009,
-            "genero": "Fantasia/Aventura",
-            "duracao_minutos": 153,
-            "classificacao": "12",
-            "avaliacao_imdb": 7.6,
-            "situacao": 1
-        },
-        {
-            "id": 7,
-            "titulo": "Harry Potter e as Relíquias da Morte: Parte 1",
-            "titulo_original": "Harry Potter and the Deathly Hallows – Part 1",
-            "diretor": "David Yates",
-            "ano_lancamento": 2010,
-            "genero": "Fantasia/Aventura",
-            "duracao_minutos": 146,
-            "classificacao": "12",
-            "avaliacao_imdb": 7.7,
-            "situacao": 1
-        },
-        {
-            "id": 8,
-            "titulo": "Harry Potter e as Relíquias da Morte: Parte 2",
-            "titulo_original": "Harry Potter and the Deathly Hallows – Part 2",
-            "diretor": "David Yates",
-            "ano_lancamento": 2011,
-            "genero": "Fantasia/Aventura",
-            "duracao_minutos": 130,
-            "classificacao": "12",
-            "avaliacao_imdb": 8.1,
-            "situacao": 1
-        }
-    ]
+import repository
 
 @app.route("/filmes", methods=['GET'])
 def filmes_listar_todos():
+    dados = repository.carregar_filmes()
     return jsonify(dados), 200
 
 @app.route("/filmes/<int:id>", methods=['GET'])
 def filmes_por_id(id):
+    dados = repository.carregar_filmes()
     for filme in dados:
         if filme['id'] == id:
             return jsonify(filme), 200
@@ -113,22 +17,29 @@ def filmes_por_id(id):
 
 @app.route("/filmes/<int:id>", methods=['DELETE'])
 def filmes_deletar(id):
+    dados = repository.carregar_filmes()
     for filme in dados:
         if filme['id'] == id:
             dados.remove(filme)
+
+            repository.persistir_filmes(dados)
             return jsonify({"info": "Filme removido com sucesso"}), 204
     return jsonify({"erro": "Filme nao encontrado"}), 404
 
 @app.route("/filmes/<int:id>", methods=['PATCH'])
 def filmes_alterar_situacao(id):
+    dados = repository.carregar_filmes()
     for filme in dados:
         if filme['id'] == id:
             filme['situacao'] = not filme['situacao']
+
+            repository.persistir_filmes(dados)
             return jsonify(filme), 204
     return jsonify({"erro": "Filme nao encontrado"}), 404
 
 @app.route("/filmes/<int:id>", methods=['PUT'])
 def filmes_atualizar(id):
+    dados = repository.carregar_filmes()
     dados_recebidos = request.get_json()
 
     for filme in dados:
@@ -143,12 +54,14 @@ def filmes_atualizar(id):
             filme['avaliacao_imdb'] = dados_recebidos.get('avaliacao_imdb', filme['avaliacao_imdb'])
             filme['situacao'] = dados_recebidos.get('situacao', filme['situacao'])
 
+            repository.persistir_filmes(dados)
             return jsonify(filme), 200
 
     return jsonify({"erro": "Filme nao encontrado"}), 404
 
 @app.route("/filmes", methods=['POST'])
 def filmes_cadastrar():
+    dados = repository.carregar_filmes()
     dados_recebidos = request.get_json()
 
     campos_obrigatorios = [
@@ -180,5 +93,6 @@ def filmes_cadastrar():
     }
 
     dados.append(novo_filme)
+    repository.persistir_filmes(dados)
 
     return jsonify(novo_filme), 201
