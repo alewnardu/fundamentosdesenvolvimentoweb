@@ -14,14 +14,14 @@ JSON no contexto da entidade Filme.
 
     desafiopratico/
     │
-    ├── venv/                     # Ambiente virtual Python
-    ├── app.py                   # Arquivo principal da aplicação Flask
-    ├── routes.py                # Definição das rotas/endpoints da API
-    ├── repository.py            # Camada de acesso aos dados (leitura/escrita JSON)
-    ├── filmes.json              # Base de dados em formato JSON
-    ├── postman_collection.json  # Coleção de endpoints para testes no Postman
-    ├── requirements.txt         # Dependências do projeto
-    └── .gitignore               # Arquivos ignorados pelo Git
+    ├── .gitignore                 # Arquivos ignorados pelo Git
+    ├── app.py                     # Arquivo principal da aplicação Flask
+    ├── filmes.json                # Base de dados em formato JSON
+    ├── postman_collection.json    # Coleção de endpoints para testes no Postman
+    ├── repository.py              # Camada de acesso aos dados (leitura/escrita JSON)
+    ├── requirements.txt           # Dependências do projeto
+    ├── rotas_atividade_avaliativa # Print da tela inicial listando as rotas do projeto
+    └── routes.py                  # Definição das rotas/endpoints da API
 
 #### Como executar o projeto
 
