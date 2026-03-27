@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "titulo": "Harry Potter e a Pedra Filosofal",
+        "titulo_original": "Harry Potter and the Sorcerer's Stone",
+        "diretor": "Chris Columbus",
+        "ano_lancamento": 2001,
+        "genero": "Fantasia/Aventura",
+        "duracao_minutos": 152,
+        "classificacao": "Livre",
+        "avaliacao_imdb": 7.6,
+        "situacao": 1
+    },
+    {
+        "id": 2,
+        "titulo": "Harry Potter e a Câmara Secreta",
+        "titulo_original": "Harry Potter and the Chamber of Secrets",
+        "diretor": "Chris Columbus",
+        "ano_lancamento": 2002,
+        "genero": "Fantasia/Aventura",
+        "duracao_minutos": 161,
+        "classificacao": "Livre",
+        "avaliacao_imdb": 7.4,
+        "situacao": 1
+    },
+    {
+        "id": 3,
+        "titulo": "Harry Potter e o Prisioneiro de Azkaban",
+        "titulo_original": "Harry Potter and the Prisoner of Azkaban",
+        "diretor": "Alfonso Cuarón",
+        "ano_lancamento": 2004,
+        "genero": "Fantasia/Aventura",
+        "duracao_minutos": 142,
+        "classificacao": "Livre",
+        "avaliacao_imdb": 7.9,
+        "situacao": 1
+    },
+    {
+        "id": 4,
+        "titulo": "Harry Potter Teste Atualizado",
+        "titulo_original": "Test Movie Atualizado",
+        "diretor": "Leonardo Atualizado",
+        "ano_lancamento": 2026,
+        "genero": "Fantasia",
+        "duracao_minutos": 120,
+        "classificacao": "Livre",
+        "avaliacao_imdb": 9.5,
+        "situacao": 1
+    },
+    {
+        "id": 5,
+        "titulo": "Harry Potter e a Ordem da Fênix",
+        "titulo_original": "Harry Potter and the Order of the Phoenix",
+        "diretor": "David Yates",
+        "ano_lancamento": 2007,
+        "genero": "Fantasia/Aventura",
+        "duracao_minutos": 138,
+        "classificacao": "12",
+        "avaliacao_imdb": 7.5,
+        "situacao": 1
+    },
+    {
+        "id": 6,
+        "titulo": "Harry Potter e o Enigma do Príncipe",
+        "titulo_original": "Harry Potter and the Half-Blood Prince",
+        "diretor": "David Yates",
+        "ano_lancamento": 2009,
+        "genero": "Fantasia/Aventura",
+        "duracao_minutos": 153,
+        "classificacao": "12",
+        "avaliacao_imdb": 7.6,
+        "situacao": false
+    },
+    {
+        "id": 7,
+        "titulo": "Harry Potter e as Relíquias da Morte: Parte 1",
+        "titulo_original": "Harry Potter and the Deathly Hallows – Part 1",
+        "diretor": "David Yates",
+        "ano_lancamento": 2010,
+        "genero": "Fantasia/Aventura",
+        "duracao_minutos": 146,
+        "classificacao": "12",
+        "avaliacao_imdb": 7.7,
+        "situacao": 1
+    },
+    {
+        "id": 8,
+        "titulo": "Harry Potter e as Relíquias da Morte: Parte 2",
+        "titulo_original": "Harry Potter and the Deathly Hallows – Part 2",
+        "diretor": "David Yates",
+        "ano_lancamento": 2011,
+        "genero": "Fantasia/Aventura",
+        "duracao_minutos": 130,
+        "classificacao": "12",
+        "avaliacao_imdb": 8.1,
+        "situacao": 1
+    },
+    {
+        "id": 10,
+        "titulo": "Animais Fantásticos e Onde Habitam",
+        "titulo_original": "Fantastic Beasts and Where to Find Them",
+        "diretor": "David Yates",
+        "ano_lancamento": 2016,
+        "genero": "Fantasia",
+        "duracao_minutos": 132,
+        "classificacao": "12",
+        "avaliacao_imdb": 7.2,
+        "situacao": 1
+    }
+]
