@@ -7,6 +7,9 @@ A aplicação está escrita em Pyhton e Flask, permitindo realizar operações d
 CRUD (Create, Read, Update, Delete) utilizando persistência em arquivo
 JSON no contexto da entidade Filme.
 
+
+![Preview do Projeto](desafiopratico/rotas_atividade_avaliativa.png)
+
 #### Estrutura do Projeto
 
     desafiopratico/
