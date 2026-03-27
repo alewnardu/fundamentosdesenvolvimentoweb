@@ -7,7 +7,7 @@ A aplicação está escrita em Pyhton e Flask, permitindo realizar operações d
 CRUD (Create, Read, Update, Delete) utilizando persistência em arquivo
 JSON no contexto da entidade Filme.
 
-#### 📁 Estrutura do Projeto
+#### Estrutura do Projeto
 
     desafiopratico/
     │
@@ -20,31 +20,31 @@ JSON no contexto da entidade Filme.
     ├── requirements.txt         # Dependências do projeto
     └── .gitignore               # Arquivos ignorados pelo Git
 
-#### 🚀 Como executar o projeto
+#### Como executar o projeto
 
-#### 🔹 1. Criar e ativar o ambiente virtual
+#### 1. Criar e ativar o ambiente virtual
 
-#### ▶️ Windows
+#### Windows
 
     python -m venv venv
     venv\Scripts\activate
 
-#### ▶️ Linux/Mac
+#### Linux/Mac
 
     python3 -m venv venv
     source venv/bin/activate
 
-#### 🔹 2. Instalar as dependências
+#### 2. Instalar as dependências
 
     pip install -r requirements.txt
 
-#### 🔹 3. Executar a aplicação
+#### 3. Executar a aplicação
 
     python app.py
 
 A aplicação será iniciada em: http://127.0.0.1:5000
 
-#### 📌 Endpoints da API
+#### Endpoints da API
 
   Método    Rota    Descrição
   -------- -------------- -----------------------
@@ -55,7 +55,7 @@ A aplicação será iniciada em: http://127.0.0.1:5000
   PATCH    /filmes/{id}   Atualiza parcialmente o filme  
   DELETE   /filmes/{id}   Remove filme  
 
-#### 🧪 Testes com Postman
+#### Testes com Postman
 
 O arquivo `postman_collection.json` pode ser importado no Postman para
 facilitar os testes dos endpoints.
